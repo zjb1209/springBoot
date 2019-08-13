@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jeesite.modules.test.dao.BaseOrgDao">
+        <select id="findList" resultType="baseOrg">
+            SELECT id,code,name_cn,postcode,administrative_division,status
+            FROM ${sqlMap.table.toSql()}
+            where is_deleted ='0'
+            ORDER BY ${sqlMap.order.toSql()}
+        </select>
+
+        <select id="findCount" resultType="Long">
+            select count(*) from ${sqlMap.table.toSql()} where is_deleted ='0'
+        </select>
+
+        <update id="delete">
+             update
+                ${sqlMap.table.toSql()} set is_deleted ='1'
+              where
+                id = #{id}
+
+        </update>
+
+        <update id="updateStatus">
+             update
+                ${sqlMap.table.toSql()} set status =#{status}
+              where
+                id = #{id}
+        </update>
+</mapper>
+
