@@ -9,7 +9,7 @@
 				<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 			</div>
 		</div>
-		<#form:form id="inputForm" model="${testTree}" action="${ctx}/test/testTree/save" method="post" class="form-horizontal">
+		<#form:form id="inputForm" model="${testTree}" action="${ctx}/org/orgInfo/save" method="post" class="form-horizontal">
 			<div class="box-body">
 				<div class="form-unit">${text('基本信息')}</div>
 				<div class="row">
@@ -19,7 +19,7 @@
 							<div class="col-sm-8">
 								<#form:treeselect id="parent" title="${text('上级数据')}"
 									path="parent.id" labelPath="parent.treeName"
-									url="${ctx}/test/testTree/treeData?excludeCode=${testTree.id}"
+									url="${ctx}/org/orgInfo/treeData?excludeCode=${testTree.id}"
 									class="" allowClear="true" canSelectRoot="true" canSelectParent="true"/>
 							</div>
 						</div>
@@ -122,7 +122,7 @@ $("#inputForm").validate({
 function treeselectCallback(id, act, index, layero){
 	if (id == 'parent' && (act == 'ok' || act == 'clear')){
 		// 创建并初始化下一个节点信息，如：排序号、默认值
-		$.get('${ctx}/test/testTree/createNextNode?parentCode='
+		$.get('${ctx}/org/orgInfo/createNextNode?parentCode='
 				+$('#parentCode').val(), function(data){
 			$('#treeSort').val(data.treeSort);
 		});

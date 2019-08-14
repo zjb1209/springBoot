@@ -1,31 +1,41 @@
-2019-08-13 21:45:43.591 ERROR 412 [nio-8980-exec-5] [o.a.c.c.C.[.[.[/js].[dispatcherServlet]] - Servlet.service() for servlet [dispatcherServlet] in context with path [/js] threw exception [Request processing failed; nested exception is 
->>09:45:43:变量未定义(VAR_NOT_DEFINED):employee 位于6行 资源:/modules/test/testDataForm.html
-3|	<div class="box box-main">
-4|		<div class="box-header with-border">
-5|			<div class="box-title">
-6|				<i class="fa fa-list-alt"></i> ${text(employee.isNewRecord ? '新增数据' : '编辑数据')}
-7|			</div>
-8|			<div class="box-tools pull-right">
-9|				<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+2019-08-14 22:32:04.583 ERROR 13048 [nio-8980-exec-5] [o.a.c.c.C.[.[.[/js].[dispatcherServlet]] - Servlet.service() for servlet [dispatcherServlet] in context with path [/js] threw exception [Request processing failed; nested exception is 
+>>10:32:04:词法错误(TOKEN_ERROR):')){ 
+ 位于63行 资源:/modules/org/orgInfoForm.html
+60|			<div class="box-footer">
+61|				<div class="row">
+62|					<div class="col-sm-offset-2 col-sm-10">
+63|						<% if (hasPermi(org_edit')){ %>
+64|							<button type="submit" class="btn btn-sm btn-primary" id="btnSubmit"><i class="fa fa-check"></i> ${text('保 存')}</button>&nbsp;
+65|						<% } %>
+66|						<button type="button" class="btn btn-sm btn-default" id="btnCancel" onclick="js.closeCurrentTabPage()"><i class="fa fa-reply-all"></i> ${text('关 闭')}</button>
 ] with root cause
 
 org.beetl.core.exception.BeetlException: null
-	at org.beetl.core.statement.VarRef.getValue(VarRef.java:198)
-	at org.beetl.core.statement.VarRef.evaluate(VarRef.java:76)
-	at org.beetl.core.statement.TernaryExpression.evaluate(TernaryExpression.java:60)
-	at org.beetl.core.statement.FunctionExpression.evaluate(FunctionExpression.java:87)
-	at org.beetl.core.statement.PlaceholderST.execute(PlaceholderST.java:34)
-	at org.beetl.core.statement.BlockStatement.execute(BlockStatement.java:68)
-	at org.beetl.core.Tag.doBodyRender(Tag.java:60)
-	at org.beetl.core.Tag.getBodyContent(Tag.java:69)
-	at org.beetl.ext.tag.LayoutTag.render(LayoutTag.java:104)
-	at org.beetl.core.statement.TagStatement.runTag(TagStatement.java:110)
-	at org.beetl.core.statement.TagStatement.execute(TagStatement.java:87)
-	at org.beetl.core.statement.Program.execute(Program.java:70)
-	at org.beetl.core.engine.FilterProgram.execute(FilterProgram.java:31)
-	at org.beetl.core.Template.renderTo(Template.java:136)
-	at org.beetl.core.Template.renderTo(Template.java:89)
-	at org.beetl.ext.web.WebRender.render(WebRender.java:127)
+	at org.beetl.core.parser.SyntaxErrorListener.syntaxError(SyntaxErrorListener.java:16)
+	at org.antlr.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:41)
+	at org.beetl.core.parser.BeetlLexer.notifyListeners(BeetlLexer.java:72)
+	at org.antlr.v4.runtime.Lexer.nextToken(Lexer.java:144)
+	at org.antlr.v4.runtime.BufferedTokenStream.fetch(BufferedTokenStream.java:161)
+	at org.antlr.v4.runtime.BufferedTokenStream.sync(BufferedTokenStream.java:144)
+	at org.antlr.v4.runtime.BufferedTokenStream.consume(BufferedTokenStream.java:128)
+	at org.antlr.v4.runtime.atn.ParserATNSimulator.execATN(ParserATNSimulator.java:537)
+	at org.antlr.v4.runtime.atn.ParserATNSimulator.adaptivePredict(ParserATNSimulator.java:393)
+	at org.beetl.core.parser.BeetlParser.expression(BeetlParser.java:2213)
+	at org.beetl.core.parser.BeetlParser.parExpression(BeetlParser.java:1729)
+	at org.beetl.core.parser.BeetlParser.statement(BeetlParser.java:415)
+	at org.beetl.core.parser.BeetlParser.block(BeetlParser.java:171)
+	at org.beetl.core.parser.BeetlParser.functionTagCall(BeetlParser.java:2888)
+	at org.beetl.core.parser.BeetlParser.statement(BeetlParser.java:574)
+	at org.beetl.core.parser.BeetlParser.block(BeetlParser.java:171)
+	at org.beetl.core.parser.BeetlParser.functionTagCall(BeetlParser.java:2888)
+	at org.beetl.core.parser.BeetlParser.statement(BeetlParser.java:574)
+	at org.beetl.core.parser.BeetlParser.prog(BeetlParser.java:121)
+	at org.beetl.core.engine.DefaultTemplateEngine.createProgram(DefaultTemplateEngine.java:56)
+	at org.beetl.core.engine.FastRuntimeEngine.createProgram(FastRuntimeEngine.java:18)
+	at org.beetl.core.GroupTemplate.loadTemplate(GroupTemplate.java:669)
+	at org.beetl.core.GroupTemplate.getTemplateByLoader(GroupTemplate.java:595)
+	at org.beetl.core.GroupTemplate.getTemplate(GroupTemplate.java:559)
+	at org.beetl.ext.web.WebRender.render(WebRender.java:86)
 	at org.beetl.ext.spring.BeetlSpringView.renderMergedTemplateModel(BeetlSpringView.java:123)
 	at com.jeesite.common.beetl.y.i.renderMergedTemplateModel(iq:65)
 	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:165)
@@ -83,9 +93,9 @@ org.beetl.core.exception.BeetlException: null
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 
-2019-08-13 21:45:43.613 ERROR 412 [nio-8980-exec-5] [error/500                              ] - VAR_NOT_DEFINED
+2019-08-14 22:32:04.603 ERROR 13048 [nio-8980-exec-5] [error/500                              ] - TOKEN_ERROR
 
-org.beetl.core.exception.BeetlException: VAR_NOT_DEFINED
+org.beetl.core.exception.BeetlException: TOKEN_ERROR
 	at com.jeesite.common.beetl.handler.LoggerErrorHandler.processExcption(kz:137)
 	at org.beetl.core.Template.renderTo(Template.java:169)
 	at org.beetl.core.Template.renderTo(Template.java:89)
@@ -147,50 +157,71 @@ org.beetl.core.exception.BeetlException: VAR_NOT_DEFINED
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: org.beetl.core.exception.BeetlException: null
-	at org.beetl.core.statement.VarRef.getValue(VarRef.java:198)
-	at org.beetl.core.statement.VarRef.evaluate(VarRef.java:76)
-	at org.beetl.core.statement.TernaryExpression.evaluate(TernaryExpression.java:60)
-	at org.beetl.core.statement.FunctionExpression.evaluate(FunctionExpression.java:87)
-	at org.beetl.core.statement.PlaceholderST.execute(PlaceholderST.java:34)
-	at org.beetl.core.statement.BlockStatement.execute(BlockStatement.java:68)
-	at org.beetl.core.Tag.doBodyRender(Tag.java:60)
-	at org.beetl.core.Tag.getBodyContent(Tag.java:69)
-	at org.beetl.ext.tag.LayoutTag.render(LayoutTag.java:104)
-	at org.beetl.core.statement.TagStatement.runTag(TagStatement.java:110)
-	at org.beetl.core.statement.TagStatement.execute(TagStatement.java:87)
-	at org.beetl.core.statement.Program.execute(Program.java:70)
-	at org.beetl.core.engine.FilterProgram.execute(FilterProgram.java:31)
-	at org.beetl.core.Template.renderTo(Template.java:136)
-	... 58 common frames omitted
+	at org.beetl.core.parser.SyntaxErrorListener.syntaxError(SyntaxErrorListener.java:16)
+	at org.antlr.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:41)
+	at org.beetl.core.parser.BeetlLexer.notifyListeners(BeetlLexer.java:72)
+	at org.antlr.v4.runtime.Lexer.nextToken(Lexer.java:144)
+	at org.antlr.v4.runtime.BufferedTokenStream.fetch(BufferedTokenStream.java:161)
+	at org.antlr.v4.runtime.BufferedTokenStream.sync(BufferedTokenStream.java:144)
+	at org.antlr.v4.runtime.BufferedTokenStream.consume(BufferedTokenStream.java:128)
+	at org.antlr.v4.runtime.atn.ParserATNSimulator.execATN(ParserATNSimulator.java:537)
+	at org.antlr.v4.runtime.atn.ParserATNSimulator.adaptivePredict(ParserATNSimulator.java:393)
+	at org.beetl.core.parser.BeetlParser.expression(BeetlParser.java:2213)
+	at org.beetl.core.parser.BeetlParser.parExpression(BeetlParser.java:1729)
+	at org.beetl.core.parser.BeetlParser.statement(BeetlParser.java:415)
+	at org.beetl.core.parser.BeetlParser.block(BeetlParser.java:171)
+	at org.beetl.core.parser.BeetlParser.functionTagCall(BeetlParser.java:2888)
+	at org.beetl.core.parser.BeetlParser.statement(BeetlParser.java:574)
+	at org.beetl.core.parser.BeetlParser.block(BeetlParser.java:171)
+	at org.beetl.core.parser.BeetlParser.functionTagCall(BeetlParser.java:2888)
+	at org.beetl.core.parser.BeetlParser.statement(BeetlParser.java:574)
+	at org.beetl.core.parser.BeetlParser.prog(BeetlParser.java:121)
+	at org.beetl.core.engine.DefaultTemplateEngine.createProgram(DefaultTemplateEngine.java:56)
+	at org.beetl.core.engine.FastRuntimeEngine.createProgram(FastRuntimeEngine.java:18)
+	at org.beetl.core.GroupTemplate.loadTemplate(GroupTemplate.java:669)
+	at org.beetl.core.GroupTemplate.getTemplateByLoader(GroupTemplate.java:595)
+	at org.beetl.core.GroupTemplate.getTemplate(GroupTemplate.java:559)
+	at org.beetl.ext.web.WebRender.render(WebRender.java:86)
+	... 56 common frames omitted
 
-2019-08-13 21:46:16.533 ERROR 412 [io-8980-exec-10] [o.a.c.c.C.[.[.[/js].[dispatcherServlet]] - Servlet.service() for servlet [dispatcherServlet] in context with path [/js] threw exception [Request processing failed; nested exception is 
->>09:46:16:变量未定义(VAR_NOT_DEFINED):employee 位于6行 资源:/modules/test/testDataForm.html
-3|	<div class="box box-main">
-4|		<div class="box-header with-border">
-5|			<div class="box-title">
-6|				<i class="fa fa-list-alt"></i> ${text(employee.isNewRecord ? '新增数据' : '编辑数据')}
-7|			</div>
-8|			<div class="box-tools pull-right">
-9|				<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+2019-08-14 22:34:52.111 ERROR 11288 [nio-8980-exec-6] [o.a.c.c.C.[.[.[/js].[dispatcherServlet]] - Servlet.service() for servlet [dispatcherServlet] in context with path [/js] threw exception [Request processing failed; nested exception is 
+>>10:34:52:词法错误(TOKEN_ERROR):')){ 
+ 位于63行 资源:/modules/org/orgInfoForm.html
+60|			<div class="box-footer">
+61|				<div class="row">
+62|					<div class="col-sm-offset-2 col-sm-10">
+63|						<% if (hasPermi(org_edit')){ %>
+64|							<button type="submit" class="btn btn-sm btn-primary" id="btnSubmit"><i class="fa fa-check"></i> ${text('保 存')}</button>&nbsp;
+65|						<% } %>
+66|						<button type="button" class="btn btn-sm btn-default" id="btnCancel" onclick="js.closeCurrentTabPage()"><i class="fa fa-reply-all"></i> ${text('关 闭')}</button>
 ] with root cause
 
 org.beetl.core.exception.BeetlException: null
-	at org.beetl.core.statement.VarRef.getValue(VarRef.java:198)
-	at org.beetl.core.statement.VarRef.evaluate(VarRef.java:76)
-	at org.beetl.core.statement.TernaryExpression.evaluate(TernaryExpression.java:60)
-	at org.beetl.core.statement.FunctionExpression.evaluate(FunctionExpression.java:87)
-	at org.beetl.core.statement.PlaceholderST.execute(PlaceholderST.java:34)
-	at org.beetl.core.statement.BlockStatement.execute(BlockStatement.java:68)
-	at org.beetl.core.Tag.doBodyRender(Tag.java:60)
-	at org.beetl.core.Tag.getBodyContent(Tag.java:69)
-	at org.beetl.ext.tag.LayoutTag.render(LayoutTag.java:104)
-	at org.beetl.core.statement.TagStatement.runTag(TagStatement.java:110)
-	at org.beetl.core.statement.TagStatement.execute(TagStatement.java:87)
-	at org.beetl.core.statement.Program.execute(Program.java:70)
-	at org.beetl.core.engine.FilterProgram.execute(FilterProgram.java:31)
-	at org.beetl.core.Template.renderTo(Template.java:136)
-	at org.beetl.core.Template.renderTo(Template.java:89)
-	at org.beetl.ext.web.WebRender.render(WebRender.java:127)
+	at org.beetl.core.parser.SyntaxErrorListener.syntaxError(SyntaxErrorListener.java:16)
+	at org.antlr.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:41)
+	at org.beetl.core.parser.BeetlLexer.notifyListeners(BeetlLexer.java:72)
+	at org.antlr.v4.runtime.Lexer.nextToken(Lexer.java:144)
+	at org.antlr.v4.runtime.BufferedTokenStream.fetch(BufferedTokenStream.java:161)
+	at org.antlr.v4.runtime.BufferedTokenStream.sync(BufferedTokenStream.java:144)
+	at org.antlr.v4.runtime.BufferedTokenStream.consume(BufferedTokenStream.java:128)
+	at org.antlr.v4.runtime.atn.ParserATNSimulator.execATN(ParserATNSimulator.java:537)
+	at org.antlr.v4.runtime.atn.ParserATNSimulator.adaptivePredict(ParserATNSimulator.java:393)
+	at org.beetl.core.parser.BeetlParser.expression(BeetlParser.java:2213)
+	at org.beetl.core.parser.BeetlParser.parExpression(BeetlParser.java:1729)
+	at org.beetl.core.parser.BeetlParser.statement(BeetlParser.java:415)
+	at org.beetl.core.parser.BeetlParser.block(BeetlParser.java:171)
+	at org.beetl.core.parser.BeetlParser.functionTagCall(BeetlParser.java:2888)
+	at org.beetl.core.parser.BeetlParser.statement(BeetlParser.java:574)
+	at org.beetl.core.parser.BeetlParser.block(BeetlParser.java:171)
+	at org.beetl.core.parser.BeetlParser.functionTagCall(BeetlParser.java:2888)
+	at org.beetl.core.parser.BeetlParser.statement(BeetlParser.java:574)
+	at org.beetl.core.parser.BeetlParser.prog(BeetlParser.java:121)
+	at org.beetl.core.engine.DefaultTemplateEngine.createProgram(DefaultTemplateEngine.java:56)
+	at org.beetl.core.engine.FastRuntimeEngine.createProgram(FastRuntimeEngine.java:18)
+	at org.beetl.core.GroupTemplate.loadTemplate(GroupTemplate.java:669)
+	at org.beetl.core.GroupTemplate.getTemplateByLoader(GroupTemplate.java:595)
+	at org.beetl.core.GroupTemplate.getTemplate(GroupTemplate.java:559)
+	at org.beetl.ext.web.WebRender.render(WebRender.java:86)
 	at org.beetl.ext.spring.BeetlSpringView.renderMergedTemplateModel(BeetlSpringView.java:123)
 	at com.jeesite.common.beetl.y.i.renderMergedTemplateModel(iq:65)
 	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:165)
@@ -248,9 +279,9 @@ org.beetl.core.exception.BeetlException: null
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 
-2019-08-13 21:46:16.537 ERROR 412 [io-8980-exec-10] [error/500                              ] - VAR_NOT_DEFINED
+2019-08-14 22:34:52.131 ERROR 11288 [nio-8980-exec-6] [error/500                              ] - TOKEN_ERROR
 
-org.beetl.core.exception.BeetlException: VAR_NOT_DEFINED
+org.beetl.core.exception.BeetlException: TOKEN_ERROR
 	at com.jeesite.common.beetl.handler.LoggerErrorHandler.processExcption(kz:137)
 	at org.beetl.core.Template.renderTo(Template.java:169)
 	at org.beetl.core.Template.renderTo(Template.java:89)
@@ -312,540 +343,35 @@ org.beetl.core.exception.BeetlException: VAR_NOT_DEFINED
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: org.beetl.core.exception.BeetlException: null
-	at org.beetl.core.statement.VarRef.getValue(VarRef.java:198)
-	at org.beetl.core.statement.VarRef.evaluate(VarRef.java:76)
-	at org.beetl.core.statement.TernaryExpression.evaluate(TernaryExpression.java:60)
-	at org.beetl.core.statement.FunctionExpression.evaluate(FunctionExpression.java:87)
-	at org.beetl.core.statement.PlaceholderST.execute(PlaceholderST.java:34)
-	at org.beetl.core.statement.BlockStatement.execute(BlockStatement.java:68)
-	at org.beetl.core.Tag.doBodyRender(Tag.java:60)
-	at org.beetl.core.Tag.getBodyContent(Tag.java:69)
-	at org.beetl.ext.tag.LayoutTag.render(LayoutTag.java:104)
-	at org.beetl.core.statement.TagStatement.runTag(TagStatement.java:110)
-	at org.beetl.core.statement.TagStatement.execute(TagStatement.java:87)
-	at org.beetl.core.statement.Program.execute(Program.java:70)
-	at org.beetl.core.engine.FilterProgram.execute(FilterProgram.java:31)
-	at org.beetl.core.Template.renderTo(Template.java:136)
-	... 58 common frames omitted
+	at org.beetl.core.parser.SyntaxErrorListener.syntaxError(SyntaxErrorListener.java:16)
+	at org.antlr.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:41)
+	at org.beetl.core.parser.BeetlLexer.notifyListeners(BeetlLexer.java:72)
+	at org.antlr.v4.runtime.Lexer.nextToken(Lexer.java:144)
+	at org.antlr.v4.runtime.BufferedTokenStream.fetch(BufferedTokenStream.java:161)
+	at org.antlr.v4.runtime.BufferedTokenStream.sync(BufferedTokenStream.java:144)
+	at org.antlr.v4.runtime.BufferedTokenStream.consume(BufferedTokenStream.java:128)
+	at org.antlr.v4.runtime.atn.ParserATNSimulator.execATN(ParserATNSimulator.java:537)
+	at org.antlr.v4.runtime.atn.ParserATNSimulator.adaptivePredict(ParserATNSimulator.java:393)
+	at org.beetl.core.parser.BeetlParser.expression(BeetlParser.java:2213)
+	at org.beetl.core.parser.BeetlParser.parExpression(BeetlParser.java:1729)
+	at org.beetl.core.parser.BeetlParser.statement(BeetlParser.java:415)
+	at org.beetl.core.parser.BeetlParser.block(BeetlParser.java:171)
+	at org.beetl.core.parser.BeetlParser.functionTagCall(BeetlParser.java:2888)
+	at org.beetl.core.parser.BeetlParser.statement(BeetlParser.java:574)
+	at org.beetl.core.parser.BeetlParser.block(BeetlParser.java:171)
+	at org.beetl.core.parser.BeetlParser.functionTagCall(BeetlParser.java:2888)
+	at org.beetl.core.parser.BeetlParser.statement(BeetlParser.java:574)
+	at org.beetl.core.parser.BeetlParser.prog(BeetlParser.java:121)
+	at org.beetl.core.engine.DefaultTemplateEngine.createProgram(DefaultTemplateEngine.java:56)
+	at org.beetl.core.engine.FastRuntimeEngine.createProgram(FastRuntimeEngine.java:18)
+	at org.beetl.core.GroupTemplate.loadTemplate(GroupTemplate.java:669)
+	at org.beetl.core.GroupTemplate.getTemplateByLoader(GroupTemplate.java:595)
+	at org.beetl.core.GroupTemplate.getTemplate(GroupTemplate.java:559)
+	at org.beetl.ext.web.WebRender.render(WebRender.java:86)
+	... 56 common frames omitted
 
-2019-08-13 22:03:18.493 ERROR 7140 [           main] [o.s.boot.SpringApplication             ] - Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:198)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1266)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1123)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1242)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1230)
-	at com.jeesite.modules.Application.main(Application.java:21)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:198)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1266)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1123)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1322)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1288)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1190)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1093)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:819)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:725)
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1694)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1322)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1288)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1190)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1093)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:819)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:725)
-	... 36 common frames omitted
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:581)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:545)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:267)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:252)
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:250)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:219)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:189)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:136)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1753)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1690)
-	... 50 common frames omitted
-
-2019-08-13 22:07:10.805 ERROR 10856 [           main] [o.s.boot.SpringApplication             ] - Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:198)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1266)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1123)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1242)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1230)
-	at com.jeesite.modules.Application.main(Application.java:21)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:198)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1266)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1123)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1322)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1288)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1190)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1093)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:819)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:725)
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1694)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1322)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1288)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1190)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1093)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:819)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:725)
-	... 36 common frames omitted
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:581)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:545)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:267)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:252)
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:250)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:219)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:189)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:136)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1753)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1690)
-	... 50 common frames omitted
-
-2019-08-13 22:11:00.590 ERROR 3264 [           main] [o.s.boot.SpringApplication             ] - Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:198)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1266)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1123)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1242)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1230)
-	at com.jeesite.modules.Application.main(Application.java:21)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:198)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1266)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1123)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1322)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1288)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1190)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1093)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:819)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:725)
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1694)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1322)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1288)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1190)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1093)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:819)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:725)
-	... 36 common frames omitted
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:581)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:545)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:267)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:252)
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:250)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:219)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:189)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:136)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1753)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1690)
-	... 50 common frames omitted
-
-2019-08-13 22:12:07.519 ERROR 1584 [           main] [o.s.boot.SpringApplication             ] - Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:198)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1266)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1123)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1242)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1230)
-	at com.jeesite.modules.Application.main(Application.java:21)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:198)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1266)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1123)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1322)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1288)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1190)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1093)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:819)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:725)
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1694)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1322)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1288)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1190)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1093)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:819)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:725)
-	... 36 common frames omitted
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:581)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:545)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:267)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:252)
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:250)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:219)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:189)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:136)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1753)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1690)
-	... 50 common frames omitted
-
-2019-08-13 22:15:11.683 ERROR 8368 [           main] [o.s.boot.SpringApplication             ] - Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:198)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1266)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1123)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1242)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1230)
-	at com.jeesite.modules.Application.main(Application.java:21)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:198)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1266)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1123)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1322)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1288)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1190)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1093)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:819)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:725)
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1694)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1322)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1288)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1190)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1093)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:819)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:725)
-	... 36 common frames omitted
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:581)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:545)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:267)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:252)
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:250)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:219)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:189)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:136)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1753)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1690)
-	... 50 common frames omitted
-
-2019-08-13 22:18:08.276 ERROR 9264 [           main] [o.s.boot.SpringApplication             ] - Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:198)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1266)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1123)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1242)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1230)
-	at com.jeesite.modules.Application.main(Application.java:21)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/apache-maven-3.3.9/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:198)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1266)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1123)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1322)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1288)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1190)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1093)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:819)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:725)
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1694)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1322)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1288)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1190)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1093)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:819)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:725)
-	... 36 common frames omitted
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTreeController' method 
-public java.lang.String com.jeesite.modules.test.web.TestTreeController.disable(com.jeesite.modules.test.entity.TestTree)
-to {[/a/org/orgInfo/disable]}: There is already 'bicOrgController' bean method
-public java.lang.String com.jeesite.modules.test.web.BicOrgController.disable(com.jeesite.modules.test.entity.BaseOrg) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:581)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:545)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:267)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:252)
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:250)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:219)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:189)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:136)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1753)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1690)
-	... 50 common frames omitted
-
-2019-08-13 22:21:18.744 ERROR 1276 [nio-8980-exec-2] [o.a.c.c.C.[.[.[/js].[dispatcherServlet]] - Servlet.service() for servlet [dispatcherServlet] in context with path [/js] threw exception [Request processing failed; nested exception is 
->>10:21:18:变量未定义(VAR_NOT_DEFINED):testTree 位于6行 资源:/modules/org/orgInfoForm.html
+2019-08-14 22:36:18.164 ERROR 11288 [nio-8980-exec-2] [o.a.c.c.C.[.[.[/js].[dispatcherServlet]] - Servlet.service() for servlet [dispatcherServlet] in context with path [/js] threw exception [Request processing failed; nested exception is 
+>>10:36:18:变量未定义(VAR_NOT_DEFINED):testTree 位于6行 资源:/modules/org/orgInfoForm.html
 3|	<div class="box box-main">
 4|		<div class="box-header with-border">
 5|			<div class="box-title">
@@ -929,7 +455,7 @@ org.beetl.core.exception.BeetlException: null
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 
-2019-08-13 22:21:18.764 ERROR 1276 [nio-8980-exec-2] [error/500                              ] - VAR_NOT_DEFINED
+2019-08-14 22:36:18.167 ERROR 11288 [nio-8980-exec-2] [error/500                              ] - VAR_NOT_DEFINED
 
 org.beetl.core.exception.BeetlException: VAR_NOT_DEFINED
 	at com.jeesite.common.beetl.handler.LoggerErrorHandler.processExcption(kz:137)

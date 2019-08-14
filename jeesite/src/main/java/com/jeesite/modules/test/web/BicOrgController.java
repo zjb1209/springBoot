@@ -79,8 +79,13 @@ public class BicOrgController extends BaseController {
 	@RequiresPermissions("org_edit")
 	@PostMapping(value = "save")
 	@ResponseBody
-	public String save(@Validated BaseOrg baseOrg) {
-		orgInfoService.save(baseOrg);
+	public String save(BaseOrg baseOrg) {
+		boolean flag = baseOrg.getIsNewRecord();
+		if(baseOrg.getIsNewRecord()){
+			orgInfoService.save(baseOrg);
+		}else{
+			orgInfoService.update(baseOrg);
+		}
 		return renderResult(Global.TRUE, text("保存数据成功！"));
 	}
 	

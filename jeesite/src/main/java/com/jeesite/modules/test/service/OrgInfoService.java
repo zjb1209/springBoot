@@ -62,6 +62,7 @@ public class OrgInfoService extends CrudService<BaseOrgDao,BaseOrg> {
 	@Transactional(readOnly=false)
 	public void save(BaseOrg baseOrg) {
 		super.save(baseOrg);
+
 	}
 	
 	/**
@@ -71,6 +72,7 @@ public class OrgInfoService extends CrudService<BaseOrgDao,BaseOrg> {
 	@Override
 	@Transactional(readOnly=false)
 	public void updateStatus(BaseOrg baseOrg) {
+
 		baseOrgDao.updateStatus(baseOrg);
 	}
 	
