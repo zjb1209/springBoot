@@ -79,9 +79,9 @@ public class BicOrgController extends BaseController {
 	@RequiresPermissions("org_edit")
 	@PostMapping(value = "save")
 	@ResponseBody
-	public String save(BaseOrg baseOrg) {
-		boolean flag = baseOrg.getIsNewRecord();
+	public String save(@Validated BaseOrg baseOrg) {
 		if(baseOrg.getIsNewRecord()){
+			baseOrg.setStatus("0");
 			orgInfoService.save(baseOrg);
 		}else{
 			orgInfoService.update(baseOrg);

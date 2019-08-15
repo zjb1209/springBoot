@@ -21,7 +21,8 @@ import java.util.Date;
 		@Column(name="code", attrName="code", label="单行文本", queryType=QueryType.LIKE),
 		@Column(name="name_cn", attrName="nameCn", label="单行文本", queryType=QueryType.LIKE),
 		@Column(name="postcode", attrName="postCode", label="单行文本"),
-		@Column(name="administrative_division", attrName="administrativeDivision", label="单行文本")
+		@Column(name="administrative_division", attrName="administrativeDivision", label="单行文本"),
+		@Column(name="status", attrName="status", label="单行文本")
 	}
 
 )
@@ -32,11 +33,11 @@ public class BaseOrg extends DataEntity<BaseOrg> {
 	private String nameCn;		// 单行文本
 	private String postCode;		// 单行文本
 	private String administrativeDivision;		// 单行文本
-
 	private Long createUserId;
 	private Date gmtCreated;
     private Long modifyUserId;
     private Date gmtModified;
+
 
 	public BaseOrg() {
 		this(null);

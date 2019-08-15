@@ -9,6 +9,7 @@ import com.jeesite.common.mybatis.annotation.MyBatisDao;
 import com.jeesite.modules.test.entity.BaseOrg;
 import com.jeesite.modules.test.entity.TestData;
 import com.jeesite.modules.test.entity.TestTree;
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,4 @@ import java.util.Map;
  */
 @MyBatisDao
 public interface BaseOrgDao extends CrudDao<BaseOrg> {
-
-
-
 }

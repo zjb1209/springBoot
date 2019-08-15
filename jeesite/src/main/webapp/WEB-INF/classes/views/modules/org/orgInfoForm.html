@@ -12,6 +12,7 @@
 		<#form:form id="inputForm" model="${orgInfo}" action="${ctx}/org/orgInfo/save" method="post" class="form-horizontal">
 			<div class="box-body">
 				<div class="form-unit">${text('基本信息')}</div>
+				<#form:hidden path="id"/>
 				<div class="row">
 					<div class="col-xs-6">
 						<div class="form-group">
