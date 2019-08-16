@@ -21,4 +21,5 @@ import java.util.Map;
  */
 @MyBatisDao
 public interface BaseOrgDao extends CrudDao<BaseOrg> {
+
 }

@@ -1,0 +1,85 @@
+<% layout('/layouts/default.html', {title: '组织机构管理', libs: ['dataGrid']}){ %>
+<div class="main-content">
+	<div class="box box-main">
+		<div class="box-header">
+			<div class="box-title">
+				<i class="fa fa-list-alt"></i> ${text('组织机构管理')}
+			</div>
+			<div class="box-tools pull-right">
+				<a href="#" class="btn btn-default" id="btnSearch" title="${text('查询')}"><i class="fa fa-filter"></i> ${text('查询')}</a>
+				<% if(hasPermi('org_edit')){ %>
+				<a href="${ctx}/org/orgInfo/form" class="btn btn-default btnTool" title="${text('新增数据')}"><i class="fa fa-plus"></i> ${text('新增')}</a>
+				<% } %>
+			</div>
+		</div>
+		<div class="box-body">
+			<#form:form id="searchForm" model="${orgInfo}" action="${ctx}/org/orgInfo/listData" method="post" class="form-inline hide"
+					data-page-no="${parameter.pageNo}" data-page-size="${parameter.pageSize}" data-order-by="${parameter.orderBy}">
+				<div class="form-group">
+					<label class="control-label">${text('机构编码')}：</label>
+					<div class="control-inline">
+						<#form:input path="code" maxlength="20" class="form-control width-120"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label">${text('机构名称')}：</label>
+					<div class="control-inline">
+						<#form:input path="nameCn" maxlength="20" class="form-control width-120"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label">${text('机构邮编')}：</label>
+					<div class="control-inline">
+						<#form:input path="postCode" maxlength="20" class="form-control width-120"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label">${text('机构行政区划')}：</label>
+					<div class="control-inline">
+						<#form:input path="administrativeDivision" maxlength="20" class="form-control width-120"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary btn-sm">${text('查询')}</button>
+					<button type="reset" class="btn btn-default btn-sm">${text('重置')}</button>
+				</div>
+			</#form:form>
+			<table id="dataGrid"></table>
+		</div>
+	</div>
+</div>
+<% } %>
+<script>
+// 初始化DataGrid对象
+$('#dataGrid').dataGrid({
+	searchForm: $("#searchForm"),
+	columnModel: [
+		{header:'${text("机构编码")}', name:'code', index:'a.tree_sort', width:150, align:"center"},
+		{header:'${text("机构名称")}', name:'nameCn', index:'a.tree_name', width:150, align:"center"},
+		{header:'${text("机构邮编")}', name:'postCode', index:'a.tree_sort', width:150, align:"center"},
+		{header:'${text("机构行政区划")}', name:'administrativeDivision', index:'a.tree_name', width:150, align:"center"},
+		{header:'${text("状态")}', name:'status', index:'a.status', width:150, align:"center", formatter: function(val, obj, row, act){
+			return js.getDictLabel(${@DictUtils.getDictListJson('sys_search_status')}, val, '${text("未知")}', true);
+		}},
+		{header:'${text("操作")}', name:'actions', width:120, sortable:false, title:false, formatter: function(val, obj, row, act){
+			var actions = [];
+			<% if(hasPermi('org_edit')){ %>
+					actions.push('<a href="${ctx}/org/orgInfo/form?id='+row.id+'" class="btnList" title="${text("编辑数据")}"><i class="fa fa-pencil"></i></a>&nbsp;');
+					if (row.status == Global.STATUS_NORMAL){
+						actions.push('<a href="${ctx}/org/orgInfo/disable?id='+row.id+'" class="btnList" title="${text("停用数据")}" data-confirm="${text("确认要停用该数据吗？")}"><i class="glyphicon glyphicon-ban-circle"></i></a>&nbsp;');
+					}
+					if (row.status == Global.STATUS_DISABLE){
+						actions.push('<a href="${ctx}/org/orgInfo/enable?id='+row.id+'" class="btnList" title="${text("启用数据")}" data-confirm="${text("确认要启用该数据吗？")}"><i class="glyphicon glyphicon-ok-circle"></i></a>&nbsp;');
+					}
+					actions.push('<a href="${ctx}/org/orgInfo/delete?id='+row.id+'" class="btnList" title="${text("删除数据")}" data-confirm="${text("确认要删除该数据吗？")}"><i class="fa fa-trash-o"></i></a>&nbsp;');
+				<% } %>
+			return actions.join('');
+		}}
+	],
+	// 双击表格行时调用
+	ondblClickRow: function(id, rownum, colnum, event){
+		js.addTabPage(null, '编辑数据', '${ctx}/org/orgInfo/form?id='+id);
+	}
+});
+</script>

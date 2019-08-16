@@ -5,6 +5,23 @@
             SELECT id,code,name_cn,postcode,administrative_division,status
             FROM ${sqlMap.table.toSql()}
             where is_deleted ='0'
+
+            <if test="code != null and code != ''">
+                AND code = #{code}
+            </if>
+
+            <if test="nameCn != null and nameCn != ''">
+                AND nameCn = #{nameCn}
+            </if>
+
+            <if test="postCode != null and postCode != ''">
+                AND postCode = #{postCode}
+            </if>
+
+            <if test="administrativeDivision != null and administrativeDivision != ''">
+                AND administrativeDivision = #{administrativeDivision}
+            </if>
+
             ORDER BY ${sqlMap.order.toSql()}
         </select>
 
