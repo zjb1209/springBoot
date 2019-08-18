@@ -123,4 +123,13 @@ public class BicOrgController extends BaseController {
 		orgInfoService.delete(baseOrg);
 		return renderResult(Global.TRUE, text("删除数据成功！"));
 	}
+
+
+	/**
+	 * Echarts 图形展示
+	 */
+	@RequestMapping(value = "echarts")
+	public String echarts(){
+		return "modules/org/echarts";
+	}
 }
