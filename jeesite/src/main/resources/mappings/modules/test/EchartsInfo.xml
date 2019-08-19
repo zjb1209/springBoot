@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jeesite.modules.test.dao.EchartsInfoDao">
+
+       <select id="findEcharts" resultType="EchartsInfo">
+            SELECT id,name_cn,valueInfo,status
+            FROM  bic_echart_info
+            where is_deleted ='0'
+        </select>
+</mapper>
+
+

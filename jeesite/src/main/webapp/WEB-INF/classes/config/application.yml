@@ -36,11 +36,11 @@ jdbc:
   # Mysql 数据库配置
   type: mysql
   driver: com.mysql.jdbc.Driver
-  #url: jdbc:mysql://127.0.0.1:3306/jeesite2?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
-  url: jdbc:mysql://47.98.124.14:3306/jeesite2?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+  url: jdbc:mysql://127.0.0.1:3306/jeesite2?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+  #url: jdbc:mysql://47.98.124.14:3306/jeesite2?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
   username: root
-  #password: root
-  password: 540825afc7531399adf4755dd67cf209
+  password: f118f79491dc6b493b0144ff61c921b5
+  #password: 769810435AAA
   testSql: SELECT 1
 
 #  # Oracle 数据库配置

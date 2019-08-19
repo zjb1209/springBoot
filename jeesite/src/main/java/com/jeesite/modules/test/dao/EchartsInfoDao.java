@@ -5,6 +5,7 @@ package com.jeesite.modules.test.dao;
 import com.jeesite.common.dao.CrudDao;
 import com.jeesite.common.mybatis.annotation.MyBatisDao;
 import com.jeesite.modules.test.entity.BaseOrg;
+import com.jeesite.modules.test.entity.EchartsInfo;
 
 import java.util.Map;
 
@@ -14,7 +15,7 @@ import java.util.Map;
  * @version 2018-04-22
  */
 @MyBatisDao
-public interface BaseOrgDao extends CrudDao<BaseOrg> {
+public interface EchartsInfoDao extends CrudDao<EchartsInfo> {
 
-
+       Map<String, Object> findEcharts();
 }

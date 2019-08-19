@@ -2,17 +2,16 @@
  * Copyright (c) 2013-Now http://jeesite.com All rights reserved.
  */
 package com.jeesite.modules.test.service;
-import com.jeesite.common.collect.MapUtils;
 import com.jeesite.common.entity.Page;
 import com.jeesite.common.service.CrudService;
-import com.jeesite.modules.file.utils.FileUploadUtils;
 import com.jeesite.modules.test.dao.BaseOrgDao;
-import com.jeesite.modules.test.dao.TestDataChildDao;
+import com.jeesite.modules.test.dao.EchartsInfoDao;
 import com.jeesite.modules.test.entity.BaseOrg;
-import com.jeesite.modules.test.entity.TestData;
+import com.jeesite.modules.test.entity.EchartsInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 import java.util.Map;
 
@@ -28,6 +27,10 @@ public class OrgInfoService extends CrudService<BaseOrgDao,BaseOrg> {
 	@Autowired
 	private BaseOrgDao baseOrgDao;
 
+	@Autowired
+	private EchartsInfoDao echartsInfoDao;
+
+
 	/**
 	 * 获取单条数据
 	 * @param baseOrg
@@ -35,7 +38,7 @@ public class OrgInfoService extends CrudService<BaseOrgDao,BaseOrg> {
 	 */
 	@Override
 	public BaseOrg get(BaseOrg baseOrg) {
-		
+
 		return super.get(baseOrg);
 	}
 
@@ -85,5 +88,12 @@ public class OrgInfoService extends CrudService<BaseOrgDao,BaseOrg> {
 	public void delete(BaseOrg baseOrg) {
 		baseOrgDao.delete(baseOrg);
 	}
-	
+
+	/**
+	 * 查询Echarts信息
+	 */
+	@Transactional(readOnly=false)
+	public Map<String, Object> findEcharts() {
+		return  echartsInfoDao.findEcharts();
+    }
 }

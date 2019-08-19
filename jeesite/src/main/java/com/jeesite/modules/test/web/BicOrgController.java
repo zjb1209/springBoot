@@ -7,6 +7,7 @@ import com.jeesite.common.config.Global;
 import com.jeesite.common.entity.Page;
 import com.jeesite.common.web.BaseController;
 import com.jeesite.modules.test.entity.BaseOrg;
+import com.jeesite.modules.test.entity.EchartsInfo;
 import com.jeesite.modules.test.service.OrgInfoService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 组织机构Controller
@@ -130,6 +133,7 @@ public class BicOrgController extends BaseController {
 	 */
 	@RequestMapping(value = "echarts")
 	public String echarts(){
+		Map<String, Object> resultInfo = orgInfoService.findEcharts();
 		return "modules/org/echarts";
 	}
 }
