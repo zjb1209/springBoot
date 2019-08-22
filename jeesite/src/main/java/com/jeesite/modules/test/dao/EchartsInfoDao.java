@@ -7,6 +7,7 @@ import com.jeesite.common.mybatis.annotation.MyBatisDao;
 import com.jeesite.modules.test.entity.BaseOrg;
 import com.jeesite.modules.test.entity.EchartsInfo;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -17,5 +18,5 @@ import java.util.Map;
 @MyBatisDao
 public interface EchartsInfoDao extends CrudDao<EchartsInfo> {
 
-       Map<String, Object> findEcharts();
+        List<EchartsInfo>  findEcharts();
 }

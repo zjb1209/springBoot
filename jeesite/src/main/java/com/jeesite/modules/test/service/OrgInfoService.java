@@ -93,7 +93,7 @@ public class OrgInfoService extends CrudService<BaseOrgDao,BaseOrg> {
 	 * 查询Echarts信息
 	 */
 	@Transactional(readOnly=false)
-	public Map<String, Object> findEcharts() {
+	public List<EchartsInfo> findEcharts() {
 		return  echartsInfoDao.findEcharts();
     }
 }

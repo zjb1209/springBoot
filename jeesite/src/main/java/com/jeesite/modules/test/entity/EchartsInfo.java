@@ -42,6 +42,4 @@ public class EchartsInfo extends DataEntity<EchartsInfo> {
     public void setNameCn(String nameCn) {
         this.nameCn = nameCn;
     }
-
-
 }
