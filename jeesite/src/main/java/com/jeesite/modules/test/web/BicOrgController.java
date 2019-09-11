@@ -140,6 +140,7 @@ public class BicOrgController extends BaseController {
 	 */
 	@RequestMapping(value = "echarts")
 	public String echarts(){
+
 		return "modules/org/echarts";
 	}
 
@@ -155,7 +156,15 @@ public class BicOrgController extends BaseController {
 		Map<String,Object>result=new HashMap<String,Object>();
 		result.put("success", true);
 		result.put("echartsInfo",resultInfo);
-
 		return result;
+	}
+
+	/**
+	 * EchartA 图形展示
+	 */
+	@RequestMapping(value = "echartA")
+	public String echartA(){
+
+		return "modules/org/echartA";
 	}
 }

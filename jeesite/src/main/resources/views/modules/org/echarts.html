@@ -26,7 +26,7 @@
 	require(
 			[
 				'echarts',
-				'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
+				'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
 			],
 			function (ec) {
 				// 基于准备好的dom，初始化echarts图表
@@ -52,8 +52,8 @@
 					],
 					series : [
 						{
-							"name":"销量",
-							"type":"bar",
+							 name:"销量",
+							 type:'line'
 							//"data":[5, 20, 40, 10, 10, 20]
 						}
 					]
@@ -88,6 +88,7 @@
 									// 根据名字对应到相应的系列
 									name : '气温变化',
 									data : nums
+
 								} ]
 							});
 						}else{
