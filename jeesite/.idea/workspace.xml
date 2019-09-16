@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/echartA.html" line="27" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/echartA.html" line="29" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf253bf4-6681-441d-b9c1-cdd0a2e120da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/modules/org/echartA.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/modules/org/echartB.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/modules/org/echartC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/modules/org/echartD.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jeesite/modules/test/web/BicOrgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jeesite/modules/test/web/BicOrgController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/views/modules/org/echarts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/modules/org/echarts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/modules/org/orgInfoList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/modules/org/orgInfoList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/jeesite/modules/test/web/BicOrgController.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/jeesite/modules/test/web/BicOrgController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/orgInfoList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/orgInfoList.html" afterDir="false" />
     </list>
@@ -28,17 +34,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jeesite/modules/test/web/BicOrgController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="167" column="35" selection-start-line="167" selection-start-column="35" selection-end-line="167" selection-end-column="35" />
+            <state relative-caret-position="3792">
+              <caret line="192" column="35" selection-start-line="192" selection-start-column="35" selection-end-line="192" selection-end-column="35" />
+              <folding>
+                <element signature="e#4215#4216#0" expanded="true" />
+                <element signature="e#4250#4251#0" expanded="true" />
+                <element signature="e#4340#4341#0" expanded="true" />
+                <element signature="e#4375#4376#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/echartA.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/echartD.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
-              <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
+            <state relative-caret-position="1080">
+              <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/echarts.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2592">
+              <caret line="108" column="9" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -46,11 +67,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/echarts.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/echartA.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="106" column="42" lean-forward="true" selection-start-line="105" selection-start-column="16" selection-end-line="106" selection-end-column="42" />
+            <state relative-caret-position="404">
+              <caret line="92" column="77" selection-start-line="92" selection-start-column="71" selection-end-line="92" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/orgInfoList.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="16" column="107" selection-start-line="16" selection-start-column="107" selection-end-line="16" selection-end-column="107" />
             </state>
           </provider>
         </entry>
@@ -82,7 +112,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/orgInfoForm.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeesite/modules/test/entity/BaseOrg.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/config/application.yml" />
-        <option value="$PROJECT_DIR$/src/main/resources/views/modules/org/orgInfoList.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/common/common.js" />
         <option value="$PROJECT_DIR$/src/main/resources/mappings/modules/test/EchartsInfo.xml.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/config/application.yml" />
@@ -92,10 +121,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jeesite/modules/test/service/OrgInfoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeesite/modules/test/dao/EchartsInfoDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeesite/modules/test/entity/EchartsInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/views/modules/org/echarts.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/orgInfoList.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeesite/modules/test/web/BicOrgController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/echartA.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/orgInfoList.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/echartB.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/echartC.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/modules/org/echartC.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/modules/org/orgInfoList.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jeesite/modules/test/web/BicOrgController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/modules/org/echartD.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/modules/org/echarts.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/modules/org/echartA.html" />
       </list>
     </option>
   </component>
@@ -122,10 +157,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="670" />
-    <option name="y" value="38" />
-    <option name="width" value="1260" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="119" />
+    <option name="y" value="227" />
+    <option name="width" value="1707" />
     <option name="height" value="791" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -135,13 +170,17 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
@@ -153,6 +192,60 @@
               <item name="jeesite" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
@@ -175,7 +268,59 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
@@ -200,6 +345,16 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
@@ -234,10 +389,37 @@
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="org" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeesite-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jeesite" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -249,12 +431,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/views/modules/org" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
@@ -262,9 +446,9 @@
       <recent name="com.jeesite.modules.test.dao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\github\springboot\jeesite\src\main\resources\views\modules\org" />
       <recent name="D:\github\springboot\jeesite\src\main\webapp\WEB-INF\classes\views\modules\org" />
       <recent name="D:\github\springboot\jeesite\src\main\resources\mappings\modules\test" />
-      <recent name="D:\github\springboot\jeesite\src\main\resources\views\modules\org" />
       <recent name="D:\github\springboot\jeesite\src\main\resources\views\modules" />
       <recent name="D:\github\springboot\jeesite\src\main\webapp\WEB-INF\classes\views\modules" />
     </key>
@@ -375,17 +559,23 @@
       <workItem from="1567774098892" duration="599000" />
       <workItem from="1567851060956" duration="433000" />
       <workItem from="1568206050933" duration="5725000" />
+      <workItem from="1568338455188" duration="1426000" />
+      <workItem from="1568378036327" duration="4991000" />
+      <workItem from="1568450557340" duration="2122000" />
+      <workItem from="1568464176166" duration="6603000" />
+      <workItem from="1568472912544" duration="860000" />
+      <workItem from="1568548096842" duration="8499000" />
+      <workItem from="1568637876935" duration="272000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43484000" />
+    <option name="totallyTimeSpent" value="68257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17864807" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28272533" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -395,7 +585,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.043333333" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38666666" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
@@ -420,7 +610,7 @@
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24356224" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2886266" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -430,10 +620,10 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19444445" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.37444445" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.05984252" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
@@ -446,7 +636,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.020386266" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.020386266" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -471,28 +661,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jeesite-web.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://D:/git/jeesite/src/main/java/com/jeesite/modules/test/service/OrgInfoService.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/jeesite/jeesite-framework/4.1.5-SNAPSHOT/jeesite-framework-4.1.5-20190803.075904-25.jar!/com/jeesite/common/service/QueryService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="97" column="13" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
-          <folding>
-            <element signature="e#3675#3676#0" expanded="true" />
-            <element signature="e#3730#3731#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7-sources.jar!/org/apache/commons/lang3/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="337" selection-start-line="337" selection-end-line="337" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/jeesite/jeesite-framework/4.1.5-SNAPSHOT/jeesite-framework-4.1.5-20190803.075904-25.jar!/com/jeesite/common/entity/BaseEntity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
@@ -535,13 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4008">
           <caret line="170" column="6" lean-forward="true" selection-start-line="170" selection-start-column="6" selection-end-line="170" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/orgInfoForm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -756,19 +917,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/orgInfoList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="51" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeesite/modules/test/entity/EchartsInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="18" column="28" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-254">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/orgInfoForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1584">
+          <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="182" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/echarts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2544">
+          <caret line="106" column="42" selection-start-line="105" selection-start-column="16" selection-end-line="106" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/echartA.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="50" column="29" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/echartB.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2184">
+          <caret line="91" column="30" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/echartC.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/orgInfoList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+          <folding>
+            <element signature="e#168#174#1" expanded="true" />
+            <element signature="e#166#172#1" expanded="true" />
+            <element signature="e#150#156#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -780,56 +996,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/application.yml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/echartC.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-254">
-          <caret line="38" column="34" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/echarts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/orgInfoList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding>
-            <element signature="e#168#174#1" expanded="true" />
-            <element signature="e#166#172#1" expanded="true" />
-            <element signature="e#150#156#1" expanded="true" />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeesite/modules/test/web/BicOrgController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="167" column="35" selection-start-line="167" selection-start-column="35" selection-end-line="167" selection-end-column="35" />
+        <state relative-caret-position="3792">
+          <caret line="192" column="35" selection-start-line="192" selection-start-column="35" selection-end-line="192" selection-end-column="35" />
+          <folding>
+            <element signature="e#4215#4216#0" expanded="true" />
+            <element signature="e#4250#4251#0" expanded="true" />
+            <element signature="e#4340#4341#0" expanded="true" />
+            <element signature="e#4375#4376#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/echarts.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/echartD.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="106" column="42" lean-forward="true" selection-start-line="105" selection-start-column="16" selection-end-line="106" selection-end-column="42" />
+        <state relative-caret-position="1080">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/echartA.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/echarts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
+        <state relative-caret-position="2592">
+          <caret line="108" column="9" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/orgInfoList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="107" selection-start-line="16" selection-start-column="107" selection-end-line="16" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/echartA.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="92" column="77" selection-start-line="92" selection-start-column="71" selection-end-line="92" selection-end-column="77" />
         </state>
       </provider>
     </entry>

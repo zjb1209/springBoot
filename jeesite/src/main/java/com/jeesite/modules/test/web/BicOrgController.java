@@ -164,7 +164,32 @@ public class BicOrgController extends BaseController {
 	 */
 	@RequestMapping(value = "echartA")
 	public String echartA(){
-
 		return "modules/org/echartA";
+	}
+
+	/**
+	 * EchartB 图形展示
+	 */
+	@RequestMapping(value = "echartB")
+	public String echartB(){
+		return "modules/org/echartB";
+	}
+
+	/**
+	 * EchartB 图形展示
+	 */
+	@RequestMapping(value = "echartC")
+	public String echartC(){
+
+		return "modules/org/echartC";
+	}
+
+	/**
+	 * EchartB 图形展示
+	 */
+	@RequestMapping(value = "echartD")
+	public String echartD(){
+
+		return "modules/org/echartD";
 	}
 }
