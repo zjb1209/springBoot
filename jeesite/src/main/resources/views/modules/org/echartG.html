@@ -1,0 +1,91 @@
+<% layout('/layouts/default.html', {title: 'echarts', libs: ['validate','fileupload']}){ %>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=reruRKIlIKCg9hGcaPwLDRWMtOgaO3gF"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+
+
+
+<div class="main-content">
+	<div class="box-header with-border">
+		<div class="box-title">
+			 <i class="fa fa-list-alt"></i> EchartB 数据信息
+			 <!--<button type="button" class="btn btn-sm btn-primary" id="btnSubmit"><i class="fa fa-check"><a href="${ctx}/org/orgInfo/list">${text('返回')}</a></i></button>-->
+			 <button type="button" class="btn btn-sm btn-default" id="btnCancel" onclick="js.closeCurrentTabPage()"><i class="fa fa-reply-all"></i> ${text('返回')}</button>
+		</div>
+		<div class="box-tools pull-right">
+			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+		</div>
+	</div>
+	      <div id="main" style="height:400%"></div>
+          <div id="mainInfo" style="height:400%"></div>
+
+
+</div>
+<% } %>
+
+<script type="text/javascript">
+
+	    var dom = document.getElementById('main');
+	    var myChart = echarts.init(dom);
+		var app = {};
+		option = null;
+
+		var option ={
+			series:{
+				type:'sunburst',
+				data: [
+				    {
+					 name:'A',
+					 value:10,
+					 children:[{
+					 		value:3,
+						    name:'Aa',
+                            itemStyle:{
+					 		    color:'red'
+                            }
+					 },{
+						    value:5,
+						    name:'Ab'
+					 }]
+				    },
+                    {
+					  name:'B',
+					  children:[{
+					  		name:'Ba',
+						    value:4
+					  },{
+					  	    name:'Bb',
+						    value:2
+					  }],
+                        itemStyle:{
+                            color:'red'
+                        }
+				    },
+                    {
+					  name:"C",
+					  value:3
+				    }],
+                     itemStyle:{
+                         color:'#aaa'
+                     },
+                   levels:[{
+				         //留给数据下钻的节点属性
+                   },{
+				      itemStyle:{
+				          color:'yellow'
+                      }
+                   }]
+
+			}
+		}
+
+		if(option && typeof option =="object"){
+		    myChart.setOption(option,true);
+        }
+</script>
