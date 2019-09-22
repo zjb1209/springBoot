@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf253bf4-6681-441d-b9c1-cdd0a2e120da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/modules/org/echartG.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/modules/org/echartH.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeesite/modules/test/web/BicOrgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jeesite/modules/test/web/BicOrgController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/modules/org/orgInfoList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/modules/org/orgInfoList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/modules/org/echartH.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/modules/org/echartH.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/jeesite/modules/test/web/BicOrgController.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/jeesite/modules/test/web/BicOrgController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/logs/debug.2019-08-22.0.log.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/orgInfoList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/views/modules/org/orgInfoList.html" afterDir="false" />
     </list>
@@ -31,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jeesite/modules/test/web/BicOrgController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
+            <state relative-caret-position="4440">
               <caret line="219" column="35" selection-start-line="219" selection-start-column="35" selection-end-line="219" selection-end-column="35" />
               <folding>
                 <element signature="e#4215#4216#0" expanded="true" />
@@ -67,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/echartG.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="36" column="22" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="36" selection-end-column="22" />
+            <state relative-caret-position="2136">
+              <caret line="89" column="9" selection-start-line="87" selection-start-column="8" selection-end-line="89" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
@@ -80,8 +78,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/echartH.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+            <state relative-caret-position="475">
+              <caret line="35" column="23" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="23" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -92,13 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/orgInfoList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
+            <state relative-caret-position="456">
               <caret line="19" column="154" selection-start-line="19" selection-start-column="154" selection-end-line="19" selection-end-column="154" />
-              <folding>
-                <element signature="e#168#174#1" expanded="true" />
-                <element signature="e#166#172#1" expanded="true" />
-                <element signature="e#150#156#1" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -192,10 +185,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-76" />
-    <option name="y" value="473" />
+    <option name="x" value="202" />
+    <option name="y" value="88" />
     <option name="width" value="1707" />
-    <option name="height" value="791" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -203,7 +196,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -421,6 +413,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -569,18 +562,18 @@
       <workItem from="1568637876935" duration="2676000" />
       <workItem from="1568896879684" duration="2536000" />
       <workItem from="1569053522452" duration="5193000" />
-      <workItem from="1569067365057" duration="2561000" />
+      <workItem from="1569067365057" duration="4648000" />
+      <workItem from="1569140976274" duration="902000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80951000" />
+    <option name="totallyTimeSpent" value="83940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11856223" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12017167" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -590,7 +583,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.06666667" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.07333333" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
@@ -988,6 +981,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeesite/modules/test/web/BicOrgController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4440">
+          <caret line="219" column="35" selection-start-line="219" selection-start-column="35" selection-end-line="219" selection-end-column="35" />
+          <folding>
+            <element signature="e#4215#4216#0" expanded="true" />
+            <element signature="e#4250#4251#0" expanded="true" />
+            <element signature="e#4340#4341#0" expanded="true" />
+            <element signature="e#4375#4376#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/echartF.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="864">
@@ -1005,6 +1011,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/echartG.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2136">
+          <caret line="89" column="9" selection-start-line="87" selection-start-column="8" selection-end-line="89" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/orgInfoList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="154" selection-start-line="19" selection-start-column="154" selection-end-line="19" selection-end-column="154" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/echartB.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
@@ -1016,46 +1040,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/orgInfoList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="19" column="154" selection-start-line="19" selection-start-column="154" selection-end-line="19" selection-end-column="154" />
-          <folding>
-            <element signature="e#168#174#1" expanded="true" />
-            <element signature="e#166#172#1" expanded="true" />
-            <element signature="e#150#156#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeesite/modules/test/web/BicOrgController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="219" column="35" selection-start-line="219" selection-start-column="35" selection-end-line="219" selection-end-column="35" />
-          <folding>
-            <element signature="e#4215#4216#0" expanded="true" />
-            <element signature="e#4250#4251#0" expanded="true" />
-            <element signature="e#4340#4341#0" expanded="true" />
-            <element signature="e#4375#4376#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/echartG.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="36" column="22" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="36" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/views/modules/org/echartH.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        <state relative-caret-position="475">
+          <caret line="35" column="23" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="23" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
