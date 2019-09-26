@@ -1,0 +1,343 @@
+<% layout('/layouts/default.html', {title: 'echarts', libs: ['validate','fileupload']}){ %>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=reruRKIlIKCg9hGcaPwLDRWMtOgaO3gF"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+<div class="main-content">
+	<div class="box-header with-border">
+		<div class="box-title">
+			 <i class="fa fa-list-alt"></i> EchartB 数据信息
+			 <!--<button type="button" class="btn btn-sm btn-primary" id="btnSubmit"><i class="fa fa-check"><a href="${ctx}/org/orgInfo/list">${text('返回')}</a></i></button>-->
+			 <button type="button" class="btn btn-sm btn-default" id="btnCancel" onclick="js.closeCurrentTabPage()"><i class="fa fa-reply-all"></i> ${text('返回')}</button>
+		</div>
+		<div class="box-tools pull-right">
+			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+		</div>
+	</div>
+	      <div id="main" style="height:400%"></div>
+	      <div>=======================================================================================================================================================================</div>
+	      <div id="mainA" style="height:400%"></div>
+	      <div>=======================================================================================================================================================================</div>
+	      <div id="mainB" style="height:400%"></div>
+	      <div>=======================================================================================================================================================================</div>
+	      <div id="mainC"  style="height:400%"></div>
+	      <div>=======================================================================================================================================================================</div>
+	      <div id="mainD"  style="height:400%"></div>
+</div>
+<% } %>
+<script type="text/javascript">
+		var dom = document.getElementById("mainD");
+		var myChart = echarts.init(dom);
+		option = null;
+
+		option={
+			title:{
+				text:'未来一周气温变化',
+				subtext:'纯属虚构'
+			},
+			tooltip:{
+				trigger:'axis'
+			},
+			legend:{
+				data:['最高气温','最低气温']
+			},
+			toolbox:{
+				show:true,
+				feature: {
+					dataZoom:{
+						yAxisIndex:'none'
+					},
+					dataView: {readonly:false},
+					magicType: {type:['line','bar']},
+					restore:{},
+					saveAsImage: {}
+				}
+			},
+			xAxis:{
+				type:'category',
+				boundaryGap:false,
+				data:['周一','周二','周三','周四','周五','周六','周日']
+			},
+			yAxis:{
+				type:'value',
+				axisLabel:{
+					formatter:'{value} °C'
+				}
+			},
+			series:[
+					{
+				        name:'最高气温',
+						type:'line',
+						data:[11, 11, 15, 13, 12, 13, 10],
+						markPoint:{
+				        	data:[
+								{type: 'max', name: '最大值'},
+								{type: 'min', name: '最小值'}
+							]
+						},
+						markLine:{
+				        	data:[
+								{type:'average',name:'平均值'}
+							]
+						}
+			        },
+					{
+						name:'最低气温',
+						type:'line',
+						data:[1, -2, 2, 5, 3, 2, 0],
+						markPoint: {
+							data: [
+								{name: '周最低', value: -2, xAxis: 1, yAxis: -1.5}
+							]
+						},
+						markLine: {
+							data: [
+								{type: 'average', name: '平均值'},
+								[{
+									symbol: 'none',
+									x: '90%',
+									yAxis: 'max'
+								}, {
+									symbol: 'circle',
+									label: {
+										normal: {
+											position: 'start',
+											formatter: '最大值'
+										}
+									},
+									type: 'max',
+									name: '最高点'
+								}]
+							]
+						}
+					}
+			]
+		}
+
+		if (option && typeof option === "object") {
+			myChart.setOption(option, true);
+		}
+</script>
+<script type="text/javascript">
+	var dom = document.getElementById("mainC");
+	var myChart = echarts.init(dom);
+	var app = {};
+	option = null;
+
+	function randomData() {
+		now = new Date(+now + oneDay);
+		value = value + Math.random() * 21 - 10;
+		return {
+			name: now.toString(),
+			value: [
+				[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'),
+				Math.round(value)
+			]
+		}
+	}
+
+	var data = [];
+	var now = +new Date(1997, 9, 3);
+	var oneDay = 24 * 3600 * 1000;
+	var value = Math.random() * 1000;
+	for (var i = 0; i < 1000; i++) {
+		data.push(randomData());
+	}
+
+	option = {
+		title: {
+			text: '动态数据 + 时间坐标轴'
+		},
+		tooltip: {
+			trigger: 'axis',
+			formatter: function (params) {
+				params = params[0];
+				var date = new Date(params.name);
+				return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + ' : ' + params.value[1];
+			},
+			axisPointer: {
+				animation: false
+			}
+		},
+		xAxis: {
+			type: 'time',
+			splitLine: {
+				show: false
+			}
+		},
+		yAxis: {
+			type: 'value',
+			boundaryGap: [0, '100%'],
+			splitLine: {
+				show: false
+			}
+		},
+		series: [{
+			name: '模拟数据',
+			type: 'line',
+			showSymbol: false,
+			hoverAnimation: false,
+			data: data
+		}]
+	};
+
+	setInterval(function () {
+
+		for (var i = 0; i < 5; i++) {
+			data.shift();
+			data.push(randomData());
+		}
+
+		myChart.setOption({
+			series: [{
+				data: data
+			}]
+		});
+	}, 10);
+	;
+
+
+	if (option && typeof option === "object") {
+		myChart.setOption(option, true);
+	}
+
+	var dom = document.getElementById('mainB');
+	var myChart = echarts.init(dom);
+	option = null;
+
+	option = {
+		title: {
+			text: '折线图堆叠'
+		},
+		tooltip: {
+			trigger: 'axis'
+		},
+		legend: {
+			data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
+		},
+		grid: {
+			left: '3%',
+			right: '4%',
+			bottom: '3%',
+			containLabel: true
+		},
+		toolbox: {
+			feature: {
+				saveAsImage: {}
+			}
+		},
+		xAxis: {
+			type: 'category',
+			boundaryGap: false,
+			data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+		},
+		yAxis: {
+			type: 'value'
+		},
+		series: [
+			{
+				name: '邮件营销',
+				type: 'line',
+				stack: '总量',
+				data: [120, 132, 101, 134, 90, 230, 210]
+			},
+			{
+				name: '联盟广告',
+				type: 'line',
+				stack: '总量',
+				data: [220, 182, 191, 234, 290, 330, 310]
+			},
+			{
+				name: '视频广告',
+				type: 'line',
+				stack: '总量',
+				data: [150, 232, 201, 154, 190, 330, 410]
+			},
+			{
+				name: '直接访问',
+				type: 'line',
+				stack: '总量',
+				data: [320, 332, 301, 334, 390, 330, 320]
+			},
+			{
+				name: '搜索引擎',
+				type: 'line',
+				stack: '总量',
+				data: [820, 932, 901, 934, 1290, 1330, 1320]
+			}
+		]
+	}
+
+	if (option && typeof option == "object") {
+		myChart.setOption(option, true);
+	}
+
+
+	var dom = document.getElementById('mainA');
+	var myChart = echarts.init(dom);
+
+	option = null;
+
+	option = {
+		tooltip: {
+			trigger: "axis"
+		},
+		xAxis: {
+			type: 'category',
+			boundaryGap: false,
+			data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+		},
+		yAxis: {
+			type: 'value'
+		},
+		series: [{
+			data: [820, 932, 901, 934, 1290, 1330, 1320],
+			type: 'line',
+			areaStyle: {}
+		}]
+	}
+
+	if (option && typeof option == "object") {
+		myChart.setOption(option, true);
+	}
+</script>
+
+<script type="text/javascript">
+			var dom = document.getElementById('main');
+			var myChart = echarts.init(dom);
+			var app = {};
+			option = null;
+
+			option ={
+
+				    tooltip:{
+						trigger:"axis"
+					},
+				    xAxis:{
+						name:'Week',
+						type:'category',
+						data:['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
+					},
+				    yAxis:{
+						name:'值',
+						type:'value',
+					},
+				    series:[{
+						type:'line',
+						data:['230','330','440','990','890','690','900'],
+						smooth:true
+					}]
+			};
+
+			if(option && typeof option =="object"){
+				myChart.setOption(option,true);
+			}
+</script>

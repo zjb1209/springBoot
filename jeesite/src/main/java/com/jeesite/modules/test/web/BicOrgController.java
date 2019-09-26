@@ -219,4 +219,13 @@ public class BicOrgController extends BaseController {
 
 		return "modules/org/echartH";
 	}
+
+	/**
+	 * EchartLine 图形展示
+	 */
+	@RequestMapping(value = "echartLine")
+	public String echartLine(){
+
+		return "modules/org/echartLine";
+	}
 }
